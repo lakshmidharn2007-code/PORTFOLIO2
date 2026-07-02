@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#06090d" />
+<meta name="color-scheme" content="dark" />
+<title>LAKSHMIDHAR N</title>
+<meta name="description" content="Project archive of Lakshmidhar N — AI &amp; Data Science student. Deployed modules across ML, full-stack, and NLP." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%2306090d%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-family=%22monospace%22 fill=%22%233fd0ff%22 text-anchor=%22middle%22>LN</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="progress"></div>
+
+<div id="boot">
+  <div class="boot-lines mono" id="bootLines"></div>
+</div>
+
+<div class="bg-grid"></div>
+<div class="bg-blob blob-1"></div>
+<div class="bg-blob blob-2"></div>
+
+<div class="statusbar mono">
+  <span><span class="dot"></span>SYSTEM_ONLINE</span>
+  <span>[GEO] Chennai, IND · 13.08°N, 80.27°E</span>
+  <span>[VERSION] 1.0.0</span>
+  <span id="liveDate">[DATE] --.--.----</span>
+</div>
+
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span>TELECOM_CHURN_PREDICTION&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+    <span>HOMIS_HOSPITAL_SYSTEM&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+    <span>PERSONALITY_PREDICTION_AI&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+    <span>THREX_HACKATHON_PRE-FINALIST&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+    <span>SAVEETHA_ENGINEERING_COLLEGE&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+    <span>CGPA_8.60&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+    <span>TELECOM_CHURN_PREDICTION&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+    <span>HOMIS_HOSPITAL_SYSTEM&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+    <span>PERSONALITY_PREDICTION_AI&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+    <span>THREX_HACKATHON_PRE-FINALIST&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+    <span>SAVEETHA_ENGINEERING_COLLEGE&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+    <span>CGPA_8.60&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+  </div>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="dot"></span>LN.SYS</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html"><span class="idx">01</span>home</a></li>
+    <li><a href="work.html"><span class="idx">02</span>work</a></li>
+    <li><a href="about.html"><span class="idx">03</span>about</a></li>
+    <li><a href="contact.html"><span class="idx">04</span>contact</a></li>
+  </ul>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">☰</button>
+</nav>
+<div class="scrim" id="scrim"></div>
+<div class="mobile-drawer" id="drawer">
+  <a href="index.html">01 / home</a>
+  <a href="work.html">02 / work</a>
+  <a href="about.html">03 / about</a>
+  <a href="contact.html">04 / contact</a>
+</div>
+
+<!-- PROJECTS -->
+<section id="work" style="padding-top:64px;">
+  <div class="wrap reveal">
+    <div class="eyebrow">MODULE: WORK // PROJECT_ARCHIVE</div>
+    <h2 class="section-title">Deployed Modules</h2>
+    <p style="color:var(--text-dim); font-size:14px; max-width:560px;">Three systems, three different problems — customer retention, hospital operations, and resume intelligence.</p>
+
+    <div class="project-list" style="margin-top:30px;">
+
+      <div class="project-row">
+        <div class="proj-id mono">PRJ_01</div>
+        <div class="proj-main">
+          <h3><span class="year">2026</span>Telecom Customer Churn Prediction</h3>
+          <p>Predicts whether a telecom customer will stay or leave, explains the top reasons in plain language, shows a leaving-probability risk gauge, and recommends retention strategies — built so non-technical users see "Will Stay / Will Leave," not raw probabilities.</p>
+          <div class="proj-tags mono">
+            <span>PYTHON</span><span>STREAMLIT</span><span>SCIKIT-LEARN</span><span>PANDAS</span><span>PLOTLY</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a href="https://telecom-churn-project-23.streamlit.app/" target="_blank" rel="noopener">LIVE_DEMO →</a>
+          <a href="https://github.com/lakshmidharn2007-code/Telecom-Churn-Project" target="_blank" rel="noopener">SOURCE →</a>
+          <button class="btn btn-ghost" style="font-size:11px; padding:8px 14px;" onclick="openModal('prj01')">INITIALIZE →</button>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="proj-id mono">PRJ_02</div>
+        <div class="proj-main">
+          <h3><span class="year">2026</span>HOMIS — Hospital Management &amp; Information System</h3>
+          <p>Production-oriented hospital management monorepo with one shared backend and five secure role-based portals — Patient, Nurse, Doctor, Pharmacy, Receptionist. Built around JWT-based RBAC, auditable workflows, pharmacy fulfilment, secure payment orchestration, and signed-URL medical file access.</p>
+          <div class="proj-tags mono">
+            <span>TYPESCRIPT</span><span>FASTIFY</span><span>REACT</span><span>POSTGRESQL</span><span>PRISMA</span><span>REDIS</span><span>TURBOREPO</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/lakshmidharn2007-code/HOMIS" target="_blank" rel="noopener">SOURCE →</a>
+          <button class="btn btn-ghost" style="font-size:11px; padding:8px 14px;" onclick="openModal('prj02')">INITIALIZE →</button>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="proj-id mono">PRJ_03</div>
+        <div class="proj-main">
+          <h3><span class="year">2025</span>AI Resume Personality Analyzer</h3>
+          <p>Accepts PDF/DOCX resumes, parses structured candidate data, predicts a resume category with a trained scikit-learn model, and infers a transparent, rule-based personality tendency — with Firebase Auth, Storage, and Firestore powering history, search, and a recruiter-style admin dashboard.</p>
+          <div class="proj-tags mono">
+            <span>PYTHON</span><span>STREAMLIT</span><span>SCIKIT-LEARN</span><span>NLP</span><span>FIREBASE</span>
+          </div>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/lakshmidharn2007-code/personality-prediction" target="_blank" rel="noopener">SOURCE →</a>
+          <button class="btn btn-ghost" style="font-size:11px; padding:8px 14px;" onclick="openModal('prj03')">INITIALIZE →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+  <div class="wrap reveal">
+    <div class="eyebrow">MODULE: CERTIFICATIONS // VERIFIED_CREDENTIALS</div>
+    <h2 class="section-title">Certificates</h2>
+    <p style="color:var(--text-dim); font-size:14px; max-width:560px; margin-top:-24px; margin-bottom:36px;">Covering the engineering practices behind shipping software, not just writing it.</p>
+
+    <div class="cert-grid">
+
+      <button class="cert-card" onclick="openModal('cert01')">
+        <span class="cert-thumb">
+          <img src="assets/certs/cert-cloud-computing.jpg" alt="" loading="lazy" />
+        </span>
+        <span class="cert-body">
+          <span class="cert-issuer mono">IBM · COURSERA</span>
+          <span class="cert-title">Introduction to Cloud Computing</span>
+          <span class="cert-date mono">FEB 12, 2026</span>
+        </span>
+      </button>
+
+      <button class="cert-card" onclick="openModal('cert02')">
+        <span class="cert-thumb">
+          <img src="assets/certs/cert-agile-scrum.jpg" alt="" loading="lazy" />
+        </span>
+        <span class="cert-body">
+          <span class="cert-issuer mono">IBM · COURSERA</span>
+          <span class="cert-title">Introduction to Agile Development and Scrum</span>
+          <span class="cert-date mono">MAR 8, 2026</span>
+        </span>
+      </button>
+
+      <button class="cert-card" onclick="openModal('cert03')">
+        <span class="cert-thumb">
+          <img src="assets/certs/cert-devops.jpg" alt="" loading="lazy" />
+        </span>
+        <span class="cert-body">
+          <span class="cert-issuer mono">IBM · COURSERA</span>
+          <span class="cert-title">Introduction to DevOps</span>
+          <span class="cert-date mono">FEB 4, 2026</span>
+        </span>
+      </button>
+
+      <button class="cert-card" onclick="openModal('cert04')">
+        <span class="cert-thumb">
+          <img src="assets/certs/cert-software-engineering.jpg" alt="" loading="lazy" />
+        </span>
+        <span class="cert-body">
+          <span class="cert-issuer mono">IBM · COURSERA</span>
+          <span class="cert-title">Introduction to Software Engineering</span>
+          <span class="cert-date mono">MAR 8, 2026</span>
+        </span>
+      </button>
+
+      <button class="cert-card" onclick="openModal('cert05')">
+        <span class="cert-thumb">
+          <img src="assets/certs/cert-intro to db.png" alt="" loading="lazy" />
+        </span>
+        <span class="cert-body">
+          <span class="cert-issuer mono">META · COURSERA</span>
+          <span class="cert-title">Introduction to Databasses</span>
+          <span class="cert-date mono">SEP 3, 2025</span>
+        </span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3 class="display">LN.DEV</h3>
+      <p>Crafting intelligent systems from data to deployment. Engineered for clarity, built to scale.</p>
+      <div class="social-row mono">
+        <a href="https://github.com/lakshmidharn2007-code" target="_blank" rel="noopener">GITHUB</a>
+        <a href="https://www.linkedin.com/in/lakshmidharn-231107u/" target="_blank" rel="noopener">LINKEDIN</a>
+        <a href="mailto:lakshmidhar2007@gmail.com">EMAIL</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <span class="glabel">INDEX</span>
+      <a href="index.html">Home</a>
+      <a href="work.html">Projects</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="footer-col">
+      <span class="glabel">CONNECT</span>
+      <a href="mailto:lakshmidhar2007@gmail.com">Email</a>
+      <a href="contact.html">Transmission</a>
+      <a href="./Resume.pdf" download>Resume</a>
+    </div>
+  </div>
+  <div class="sys-strip">
+    <span id="copyYear">© 2026 LN.DEV — ALL_RIGHTS_RESERVED</span>
+    <span>SYSTEM_OP: NORMAL · UPTIME 99.9% · SERVER: IN</span>
+  </div>
+</footer>
+
+
+<button id="toTop" aria-label="Back to top">↑</button>
+
+<!-- PROJECT MODALS -->
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<template id="tpl-prj01">
+  <h2>Telecom Customer Churn Prediction</h2>
+  <span class="m-year mono">PRJ_01 // JUN 2026</span>
+  <p class="m-desc">A Streamlit-based ML app that predicts whether a telecom customer will stay or leave. The system explains the top reasons behind its prediction in plain language, renders a live risk-probability gauge chart, and recommends up to 3 tailored retention strategies — designed so non-technical business users see "Will Stay" or "Will Leave" instead of raw model outputs.</p>
+  <ul class="m-highlights">
+    <li>Model selection across Logistic Regression, Random Forest, and Gradient Boosting — best ROC-AUC wins.</li>
+    <li>Rule-based explanation engine surfaces the top 3 human-readable risk factors per prediction.</li>
+    <li>Plotly gauge chart with Low / Medium / High risk bands (thresholds: 35% and 70%).</li>
+    <li>One-click sample customer profiles (Low / Mid / High risk) for instant demos.</li>
+    <li>CSV report download for every prediction — status, probability, reasons, and retention strategies.</li>
+    <li>Custom light Streamlit theme with metric cards and color-coded risk badges.</li>
+  </ul>
+  <div class="proj-tags mono" style="margin-bottom:22px;">
+    <span>PYTHON</span><span>STREAMLIT</span><span>SCIKIT-LEARN</span><span>PANDAS</span><span>PLOTLY</span><span>JOBLIB</span>
+  </div>
+  <div class="m-links">
+    <a href="https://telecom-churn-project-23.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">LIVE_DEMO →</a>
+    <a href="https://github.com/lakshmidharn2007-code/Telecom-Churn-Project" target="_blank" rel="noopener" class="btn btn-ghost">SOURCE →</a>
+  </div>
+</template>
+
+<template id="tpl-prj02">
+  <h2>HOMIS — Hospital Management &amp; Information System</h2>
+  <span class="m-year mono">PRJ_02 // MAR 2026 — MAY 2026</span>
+  <p class="m-desc">A production-oriented hospital management monorepo with a single shared Fastify backend, PostgreSQL database, and five secure role-based React portals: Patient, Nurse, Doctor, Pharmacy, and Receptionist. Built as a Turborepo monorepo with full TypeScript coverage.</p>
+  <ul class="m-highlights">
+    <li>JWT / RS256 auth with role + scope claims and Redis-backed refresh token strategy.</li>
+    <li>Strict RBAC matrix — each portal sees only what its role is permitted to access.</li>
+    <li>Append-only audit logging for every write operation across the system.</li>
+    <li>Pharmacy fulfilment and payment orchestration — amounts computed server-side only.</li>
+    <li>Private medical file access via short-lived signed URLs (Firebase Storage model).</li>
+    <li>Shared packages: auth, validation (Zod), UI components, observability, SDK, types.</li>
+    <li>E2E tests with Playwright and full Docker / k8s infra scaffolding.</li>
+  </ul>
+  <div class="proj-tags mono" style="margin-bottom:22px;">
+    <span>TYPESCRIPT</span><span>FASTIFY</span><span>REACT</span><span>POSTGRESQL</span><span>PRISMA</span><span>REDIS</span><span>TURBOREPO</span><span>PLAYWRIGHT</span>
+  </div>
+  <div class="m-links">
+    <a href="https://github.com/lakshmidharn2007-code/HOMIS" target="_blank" rel="noopener" class="btn btn-primary">SOURCE →</a>
+  </div>
+</template>
+
+<template id="tpl-prj03">
+  <h2>AI Resume Personality Analyzer</h2>
+  <span class="m-year mono">PRJ_03 // JUN 2025 — JUL 2025</span>
+  <p class="m-desc">A production-style Streamlit MVP that accepts PDF and DOCX resumes, parses structured candidate data, predicts the resume category using a trained scikit-learn model, and infers a rule-based personality tendency label — backed by Firebase Auth, Firestore, and Firebase Storage.</p>
+  <ul class="m-highlights">
+    <li>Email/password authentication via Firebase Auth REST API.</li>
+    <li>Multi-file PDF and DOCX upload with structured parsing (name, email, phone, skills, education, experience, summary).</li>
+    <li>Resume category prediction with a persisted <code>resume_classifier.joblib</code> model and confidence score display.</li>
+    <li>Rule-based <code>personality_tendency</code> label with explicit non-diagnostic disclaimer.</li>
+    <li>Firebase Storage upload with Firestore persistence for all analysis records.</li>
+    <li>History page with search, filters, and CSV export.</li>
+    <li>Admin dashboard for organisation-wide analysis review.</li>
+    <li>Free-plan fallback mode — skips Storage, still saves metadata to Firestore.</li>
+  </ul>
+  <div class="proj-tags mono" style="margin-bottom:22px;">
+    <span>PYTHON</span><span>STREAMLIT</span><span>SCIKIT-LEARN</span><span>NLP</span><span>FIREBASE</span><span>FIRESTORE</span>
+  </div>
+  <div class="m-links">
+    <a href="https://github.com/lakshmidharn2007-code/personality-prediction" target="_blank" rel="noopener" class="btn btn-primary">SOURCE →</a>
+  </div>
+</template>
+
+<!-- CERTIFICATE MODALS -->
+<template id="tpl-cert01">
+  <img class="m-cert-image" src="assets/certs/cert-cloud-computing.jpg" alt="Introduction to Cloud Computing certificate, issued to Lakshmidhar N by IBM via Coursera" />
+  <h2>Introduction to Cloud Computing</h2>
+  <span class="m-year mono">IBM // COURSERA · FEB 12, 2026</span>
+  <p class="m-desc">Covers the fundamentals of cloud computing — service models (IaaS, PaaS, SaaS), deployment models, virtualization, and containers — as a grounding for building and deploying systems like HOMIS on real cloud infrastructure rather than a local machine.</p>
+  <div class="m-links">
+    <a href="https://coursera.org/verify/FGPTIY41CXHN" target="_blank" rel="noopener" class="btn btn-primary">VERIFY_CREDENTIAL →</a>
+  </div>
+</template>
+
+<template id="tpl-cert02">
+  <img class="m-cert-image" src="assets/certs/cert-agile-scrum.jpg" alt="Introduction to Agile Development and Scrum certificate, issued to Lakshmidhar N by IBM via Coursera" />
+  <h2>Introduction to Agile Development and Scrum</h2>
+  <span class="m-year mono">IBM // COURSERA · MAR 8, 2026</span>
+  <p class="m-desc">Covers Agile principles and the Scrum framework — sprints, backlogs, standups, and iterative delivery — the process side of shipping projects like HOMIS in stages rather than as one large release.</p>
+  <div class="m-links">
+    <a href="https://coursera.org/verify/69VWP79O3MQL" target="_blank" rel="noopener" class="btn btn-primary">VERIFY_CREDENTIAL →</a>
+  </div>
+</template>
+
+<template id="tpl-cert03">
+  <img class="m-cert-image" src="assets/certs/cert-devops.jpg" alt="Introduction to DevOps certificate, issued to Lakshmidhar N by IBM via Coursera" />
+  <h2>Introduction to DevOps</h2>
+  <span class="m-year mono">IBM // COURSERA · FEB 4, 2026</span>
+  <p class="m-desc">Covers the DevOps lifecycle — CI/CD, automation, monitoring, and the culture of close collaboration between development and operations — relevant to the Docker/CI scaffolding used in HOMIS.</p>
+  <div class="m-links">
+    <a href="https://coursera.org/verify/BWE1X6BX0A6R" target="_blank" rel="noopener" class="btn btn-primary">VERIFY_CREDENTIAL →</a>
+  </div>
+</template>
+
+<template id="tpl-cert04">
+  <img class="m-cert-image" src="assets/certs/cert-software-engineering.jpg" alt="Introduction to Software Engineering certificate, issued to Lakshmidhar N by IBM via Coursera" />
+  <h2>Introduction to Software Engineering</h2>
+  <span class="m-year mono">IBM // COURSERA · MAR 8, 2026</span>
+  <p class="m-desc">Covers the software development lifecycle end to end — requirements, design, testing, and maintenance — the engineering practices behind turning a working model into a maintainable product.</p>
+  <div class="m-links">
+    <a href="https://coursera.org/verify/6YYX6D0M0FQ5" target="_blank" rel="noopener" class="btn btn-primary">VERIFY_CREDENTIAL →</a>
+  </div>
+</template>
+
+<template id="tpl-cert05">
+  <img class="m-cert-image" src="assets/certs/cert-intro to db.png" alt="Introduction to Software Engineering certificate, issued to Lakshmidhar N by IBM via Coursera" />
+  <h2>Introduction to Software Engineering</h2>
+  <span class="m-year mono">META // COURSERA · SEP 3, 2025</span>
+  <p class="m-desc">Completed Introduction to Databases, gaining a strong foundation in relational databases, SQL, data modeling, and database design principles.
+Learned to create, query, and manage databases while understanding how data is stored, organized, and retrieved efficiently.</p>
+  <div class="m-links">
+    <a href="https://coursera.org/verify/VDNCGJSBLWH" target="_blank" rel="noopener" class="btn btn-primary">VERIFY_CREDENTIAL →</a>
+  </div>
+</template>
+
+<script src="js/main.js"></script>
+</body>
+</html>
