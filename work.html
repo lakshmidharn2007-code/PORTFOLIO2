@@ -130,66 +130,109 @@
 <section id="certificates">
   <div class="wrap reveal">
     <div class="eyebrow">MODULE: CERTIFICATIONS // VERIFIED_CREDENTIALS</div>
-    <h2 class="section-title">Certificates</h2>
-    <p style="color:var(--text-dim); font-size:14px; max-width:560px; margin-top:-24px; margin-bottom:36px;">Covering the engineering practices behind shipping software, not just writing it.</p>
+    <div class="cert-head-row">
+      <h2 class="section-title" style="margin-bottom:0;">Certificates</h2>
+      <div class="cert-nav">
+        <button class="cert-nav-btn" id="certPrev" aria-label="Scroll certificates left">‹</button>
+        <button class="cert-nav-btn" id="certNext" aria-label="Scroll certificates right">›</button>
+      </div>
+    </div>
+    <p style="color:var(--text-dim); font-size:14px; max-width:560px; margin-bottom:32px;">Covering the engineering practices behind shipping software, not just writing it.</p>
 
-    <div class="cert-grid">
+    <div class="cert-scroll">
+      <div class="cert-grid" id="certGrid">
 
-      <button class="cert-card" onclick="openModal('cert01')">
-        <span class="cert-thumb">
-          <img src="assets/certs/cert-cloud-computing.jpg" alt="" loading="lazy" />
-        </span>
-        <span class="cert-body">
-          <span class="cert-issuer mono">IBM · COURSERA</span>
-          <span class="cert-title">Introduction to Cloud Computing</span>
-          <span class="cert-date mono">FEB 12, 2026</span>
-        </span>
-      </button>
+        <button class="cert-card" onclick="openModal('cert01')">
+          <span class="cert-thumb">
+            <img src="assets/certs/cert-cloud-computing.jpg" alt="" loading="lazy" />
+          </span>
+          <span class="cert-body">
+            <span class="cert-issuer mono">IBM · COURSERA</span>
+            <span class="cert-title">Introduction to Cloud Computing</span>
+            <span class="cert-date mono">FEB 12, 2026</span>
+          </span>
+        </button>
 
-      <button class="cert-card" onclick="openModal('cert02')">
-        <span class="cert-thumb">
-          <img src="assets/certs/cert-agile-scrum.jpg" alt="" loading="lazy" />
-        </span>
-        <span class="cert-body">
-          <span class="cert-issuer mono">IBM · COURSERA</span>
-          <span class="cert-title">Introduction to Agile Development and Scrum</span>
-          <span class="cert-date mono">MAR 8, 2026</span>
-        </span>
-      </button>
+        <button class="cert-card" onclick="openModal('cert02')">
+          <span class="cert-thumb">
+            <img src="assets/certs/cert-agile-scrum.jpg" alt="" loading="lazy" />
+          </span>
+          <span class="cert-body">
+            <span class="cert-issuer mono">IBM · COURSERA</span>
+            <span class="cert-title">Introduction to Agile Development and Scrum</span>
+            <span class="cert-date mono">MAR 8, 2026</span>
+          </span>
+        </button>
 
-      <button class="cert-card" onclick="openModal('cert03')">
-        <span class="cert-thumb">
-          <img src="assets/certs/cert-devops.jpg" alt="" loading="lazy" />
-        </span>
-        <span class="cert-body">
-          <span class="cert-issuer mono">IBM · COURSERA</span>
-          <span class="cert-title">Introduction to DevOps</span>
-          <span class="cert-date mono">FEB 4, 2026</span>
-        </span>
-      </button>
+        <button class="cert-card" onclick="openModal('cert03')">
+          <span class="cert-thumb">
+            <img src="assets/certs/cert-devops.jpg" alt="" loading="lazy" />
+          </span>
+          <span class="cert-body">
+            <span class="cert-issuer mono">IBM · COURSERA</span>
+            <span class="cert-title">Introduction to DevOps</span>
+            <span class="cert-date mono">FEB 4, 2026</span>
+          </span>
+        </button>
 
-      <button class="cert-card" onclick="openModal('cert04')">
-        <span class="cert-thumb">
-          <img src="assets/certs/cert-software-engineering.jpg" alt="" loading="lazy" />
-        </span>
-        <span class="cert-body">
-          <span class="cert-issuer mono">IBM · COURSERA</span>
-          <span class="cert-title">Introduction to Software Engineering</span>
-          <span class="cert-date mono">MAR 8, 2026</span>
-        </span>
-      </button>
+        <button class="cert-card" onclick="openModal('cert04')">
+          <span class="cert-thumb">
+            <img src="assets/certs/cert-software-engineering.jpg" alt="" loading="lazy" />
+          </span>
+          <span class="cert-body">
+            <span class="cert-issuer mono">IBM · COURSERA</span>
+            <span class="cert-title">Introduction to Software Engineering</span>
+            <span class="cert-date mono">MAR 8, 2026</span>
+          </span>
+        </button>
 
-      <button class="cert-card" onclick="openModal('cert05')">
-        <span class="cert-thumb">
-          <img src="assets/certs/cert-intro to db.png" alt="" loading="lazy" />
-        </span>
-        <span class="cert-body">
-          <span class="cert-issuer mono">META · COURSERA</span>
-          <span class="cert-title">Introduction to Databasses</span>
-          <span class="cert-date mono">SEP 3, 2025</span>
-        </span>
-      </button>
+        <button class="cert-card" onclick="openModal('cert05')">
+          <span class="cert-thumb">
+            <img src="assets/certs/cert-intro to db.png" alt="" loading="lazy" />
+          </span>
+          <span class="cert-body">
+            <span class="cert-issuer mono">META · COURSERA</span>
+            <span class="cert-title">Introduction to Databasses</span>
+            <span class="cert-date mono">SEP 3, 2025</span>
+          </span>
+        </button>
 
+        <button class="cert-card" onclick="openModal('cert06')">
+          <span class="cert-thumb">
+            <img src="assets/certs/cert-version-06.png" alt="" loading="lazy" />
+          </span>
+          <span class="cert-body">
+            <span class="cert-issuer mono">META · COURSERA</span>
+            <span class="cert-title">Version Control</span>
+            <span class="cert-date mono">SEP 29, 2025</span>
+          </span>
+        </button>
+
+        <button class="cert-card" onclick="openModal('cert07')">
+          <span class="cert-thumb">
+            <img src="assets/certs/cert-Mongo-07.png" alt="" loading="lazy" />
+          </span>
+          <span class="cert-body">
+            <span class="cert-issuer mono">MONGO DB · COURSERA</span>
+            <span class="cert-title">Introduction to Mongo DB</span>
+            <span class="cert-date mono">SEP 19, 2025</span>
+          </span>
+        </button>
+
+        <button class="cert-card" onclick="openModal('cert08')">
+          <span class="cert-thumb">
+            <img src="assets/certs/cert-adv pytorch - 08.png" alt="" loading="lazy" />
+          </span>
+          <span class="cert-body">
+            <span class="cert-issuer mono">PACKT · COURSERA</span>
+            <span class="cert-title">Advanced Pytorch Techniques and Applications</span>
+            <span class="cert-date mono">MAR 10, 2026</span>
+          </span>
+        </button>
+
+      </div>
+      <div class="cert-fade cert-fade-l" aria-hidden="true"></div>
+      <div class="cert-fade cert-fade-r" aria-hidden="true"></div>
     </div>
   </div>
 </section>
@@ -342,13 +385,42 @@
 </template>
 
 <template id="tpl-cert05">
-  <img class="m-cert-image" src="assets/certs/cert-intro to db.png" alt="Introduction to Software Engineering certificate, issued to Lakshmidhar N by IBM via Coursera" />
-  <h2>Introduction to Software Engineering</h2>
+  <img class="m-cert-image" src="assets/certs/cert-intro to db.png" alt="Introduction to Databases certificate, issued to Lakshmidhar N by Meta via Coursera" />
+  <h2>Introduction to Databases</h2>
   <span class="m-year mono">META // COURSERA · SEP 3, 2025</span>
-  <p class="m-desc">Completed Introduction to Databases, gaining a strong foundation in relational databases, SQL, data modeling, and database design principles.
-Learned to create, query, and manage databases while understanding how data is stored, organized, and retrieved efficiently.</p>
+  <p class="m-desc">Completed Introduction to Databases, gaining a strong foundation in relational databases, SQL, data modeling, and database design principles. Learned to create, query, and manage databases while understanding how data is stored, organized, and retrieved efficiently.</p>
   <div class="m-links">
     <a href="https://coursera.org/verify/VDNCGJSBLWH" target="_blank" rel="noopener" class="btn btn-primary">VERIFY_CREDENTIAL →</a>
+  </div>
+</template>
+
+<template id="tpl-cert06">
+  <img class="m-cert-image" src="assets/certs/cert-version-06.png" alt="Version Control certificate, issued to Lakshmidhar N by Meta via Coursera" />
+  <h2>Version Control</h2>
+  <span class="m-year mono">META // COURSERA · SEP 29, 2025</span>
+  <p class="m-desc">Completed Version Control, gaining practical knowledge of Git and GitHub for tracking changes, managing repositories, and collaborating on software projects. Learned essential version control workflows, including branching, merging, committing, and resolving conflicts to support efficient team development.</p>
+  <div class="m-links">
+    <a href="https://www.coursera.org/verify/3D3R2H7QPHH0" target="_blank" rel="noopener" class="btn btn-primary">VERIFY_CREDENTIAL →</a>
+  </div>
+</template>
+
+<template id="tpl-cert07">
+  <img class="m-cert-image" src="assets/certs/cert-Mongo-07.png" alt="Introduction to MongoDB certificate, issued to Lakshmidhar N by MongoDB via Coursera" />
+  <h2>Introduction to Mongo DB</h2>
+  <span class="m-year mono">MONGO DB // COURSERA · SEP 19, 2025</span>
+  <p class="m-desc">Completed Introduction to MongoDB, covering document-based data modeling, CRUD operations, indexing, and the fundamentals of working with a NoSQL database.</p>
+  <div class="m-links">
+    <a href="https://www.coursera.org/verify/XEXOH3092SRW" target="_blank" rel="noopener" class="btn btn-primary">VERIFY_CREDENTIAL →</a>
+  </div>
+</template>
+
+<template id="tpl-cert08">
+  <img class="m-cert-image" src="assets/certs/cert-adv pytorch - 08.png" alt="Advanced PyTorch Techniques and Applications certificate, issued to Lakshmidhar N by Packt via Coursera" />
+  <h2>Advanced PyTorch Techniques and Applications</h2>
+  <span class="m-year mono">PACKT // COURSERA · MAR 10, 2026</span>
+  <p class="m-desc">Completed Advanced PyTorch Techniques and Applications, gaining hands-on experience building, training, and optimizing deep learning models in PyTorch, including transfer learning, custom neural networks, and model optimization for deployment.</p>
+  <div class="m-links">
+    <a href="https://coursera.org/verify/64CLM4QPVT36" target="_blank" rel="noopener" class="btn btn-primary">VERIFY_CREDENTIAL →</a>
   </div>
 </template>
 

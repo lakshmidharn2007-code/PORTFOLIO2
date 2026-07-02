@@ -274,6 +274,43 @@
     });
   }
 
+  /* ---------------------------------------------- certificate scroller ----------------------------- */
+  const certGrid = document.getElementById('certGrid');
+  const certPrev = document.getElementById('certPrev');
+  const certNext = document.getElementById('certNext');
+  const fadeL = document.querySelector('.cert-fade-l');
+  const fadeR = document.querySelector('.cert-fade-r');
+
+  function certStep() {
+    if (!certGrid) return 0;
+    const card = certGrid.querySelector('.cert-card');
+    const gap = 16;
+    return card ? card.getBoundingClientRect().width + gap : 260;
+  }
+
+  function updateCertFades() {
+    if (!certGrid) return;
+    const max = certGrid.scrollWidth - certGrid.clientWidth - 2;
+    const atStart = certGrid.scrollLeft <= 2;
+    const atEnd = certGrid.scrollLeft >= max;
+    fadeL?.classList.toggle('show', !atStart);
+    fadeR?.classList.toggle('show', max > 2 && !atEnd);
+    if (certPrev) certPrev.disabled = atStart;
+    if (certNext) certNext.disabled = max <= 2 || atEnd;
+  }
+
+  if (certGrid) {
+    certPrev?.addEventListener('click', () => {
+      certGrid.scrollBy({ left: -certStep() * 2, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+    certNext?.addEventListener('click', () => {
+      certGrid.scrollBy({ left: certStep() * 2, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+    certGrid.addEventListener('scroll', updateCertFades, { passive: true });
+    window.addEventListener('resize', updateCertFades);
+    updateCertFades();
+  }
+
   /* ---------------------------------------------- footer year ------------------------------------- */
   const copyYear = document.getElementById('copyYear');
   if (copyYear) {
