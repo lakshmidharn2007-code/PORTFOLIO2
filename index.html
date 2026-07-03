@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#06090d" />
+<meta name="theme-color" content="#0a0a09" />
 <meta name="color-scheme" content="dark" />
-<title>LAKSHMIDHAR N</title>
+<title>Lakshmidhar N — AI &amp; Data Science</title>
 <meta name="description" content="AI &amp; Data Science student building intelligent systems, data pipelines, and full-stack ML products." />
 <link rel="icon" href="assets/favicon.ico" sizes="any" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
@@ -14,153 +14,160 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div id="progress"></div>
 
-<!-- BOOT SEQUENCE -->
-<div id="boot">
-  <div class="boot-lines mono" id="bootLines"></div>
-</div>
-
-<div class="bg-grid"></div>
-<div class="bg-blob blob-1"></div>
-<div class="bg-blob blob-2"></div>
-
-<!-- STATUS BAR -->
-<div class="statusbar mono">
-  <span><span class="dot"></span>SYSTEM_ONLINE</span>
-  <span>[GEO] Chennai, IND · 13.08°N, 80.27°E</span>
-  <span>[VERSION] 1.1.0</span>
-  <span id="liveDate">[DATE] --.--.----</span>
-</div>
-
-<!-- TICKER -->
-<div class="ticker-wrap" aria-hidden="true">
-  <div class="ticker-track" id="tickerTrack">
-    <span>TELECOM_CHURN_PREDICTION&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>HOMIS_HOSPITAL_SYSTEM&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>PERSONALITY_PREDICTION_AI&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>THREX_HACKATHON_PRE-FINALIST&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>SAVEETHA_ENGINEERING_COLLEGE&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>CGPA_8.60&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>TELECOM_CHURN_PREDICTION&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>HOMIS_HOSPITAL_SYSTEM&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>PERSONALITY_PREDICTION_AI&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>THREX_HACKATHON_PRE-FINALIST&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>SAVEETHA_ENGINEERING_COLLEGE&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>CGPA_8.60&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="pre-row">
+    <span class="pre-label mono">LAKSHMIDHAR N</span>
+    <span class="pre-label mono" id="preStatus">LOADING</span>
   </div>
+  <div class="pre-count mono" id="preCount">000</div>
+  <div class="pre-bar" id="preBar"></div>
 </div>
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-logo"><span class="dot"></span>LN.SYS</a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html"><span class="idx">01</span>home</a></li>
-    <li><a href="work.html"><span class="idx">02</span>work</a></li>
-    <li><a href="about.html"><span class="idx">03</span>about</a></li>
-    <li><a href="contact.html"><span class="idx">04</span>contact</a></li>
-  </ul>
-  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">☰</button>
+  <a href="index.html" class="nav-logo">Lakshmidhar N</a>
+  <div class="nav-links-inline mono" aria-label="Primary">
+    <a href="index.html"><span class="midx">01</span>home</a>
+    <a href="work.html"><span class="midx">02</span>work</a>
+    <a href="about.html"><span class="midx">03</span>about</a>
+    <a href="contact.html"><span class="midx">04</span>contact</a>
+  </div>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="menuOverlay" aria-expanded="false">
+    MENU
+    <span class="bars"><span></span><span></span><span></span></span>
+  </button>
 </nav>
-<div class="scrim" id="scrim"></div>
-<div class="mobile-drawer" id="drawer">
-  <a href="index.html">01 / home</a>
-  <a href="work.html">02 / work</a>
-  <a href="about.html">03 / about</a>
-  <a href="contact.html">04 / contact</a>
+
+<!-- MENU OVERLAY -->
+<div id="menuOverlay">
+  <nav class="menu-links" aria-label="Primary">
+    <a href="index.html"><span class="midx">01</span>Home</a>
+    <a href="work.html"><span class="midx">02</span>Work</a>
+    <a href="about.html"><span class="midx">03</span>About</a>
+    <a href="contact.html"><span class="midx">04</span>Contact</a>
+  </nav>
+  <div class="menu-foot">
+    <span>Chennai, India — GMT+5:30</span>
+    <span class="msoc">
+      <a href="https://github.com/lakshmidharn2007-code" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/lakshmidharn-231107u/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:lakshmidhar2007@gmail.com">Email</a>
+    </span>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Telecom Churn Prediction</span>
+    <span>HOMIS Hospital System</span>
+    <span>Personality Prediction AI</span>
+    <span>THREX Hackathon Pre-Finalist</span>
+    <span>B.Tech AI &amp; Data Science</span>
+    <span>8.60 CGPA</span>
+    <span>Telecom Churn Prediction</span>
+    <span>HOMIS Hospital System</span>
+    <span>Personality Prediction AI</span>
+    <span>THREX Hackathon Pre-Finalist</span>
+    <span>B.Tech AI &amp; Data Science</span>
+    <span>8.60 CGPA</span>
+  </div>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="wrap hero-grid">
     <div>
-      <div class="tagrow mono">
+      <div class="tagrow">
         <span class="tag">AI &amp; DATA SCIENCE</span>
         <span class="tag">DATA SYSTEMS</span>
         <span class="tag">PYTHON / SQL</span>
       </div>
-      <h1 class="display">LAKSHMIDHAR</h1>
-      <h2 id="typedTag" aria-label="BUILDING SYSTEMS THAT LEARN, EXPLAIN & DECIDE"></h2>
+      <h1 class="hero-name" data-decode="LAKSHMIDHAR N"></h1>
+      <p class="hero-tag mono">Building systems that learn, explain &amp; decide.</p>
       <p class="lede">B.Tech AI &amp; Data Science student turning raw data into models people can actually trust — from churn prediction to hospital platforms to resume intelligence.</p>
       <div class="btn-row">
-        <a href="work.html" class="btn btn-primary">ENTER_OEUVRE →</a>
-        <a href="./Resume.pdf" class="btn btn-ghost" download>DOWNLOAD_DOSSIER ↓</a>
+        <a href="work.html" class="btn btn-primary" data-cursor="VIEW">Enter the work →</a>
+        <a href="./Resume.pdf" class="btn btn-ghost" data-cursor="GET" download>Download résumé ↓</a>
       </div>
     </div>
-    <div class="avatar-card">
-      <div class="avatar-mono"><img class="avatar-photo" src="assets/profile.jpg" alt="Portrait of Lakshmidhar N" /></div>
-      <div class="avatar-meta">
-        <span>@lakshmidhar.dev</span>
-        <span class="status-pill"><span class="dot"></span>online</span>
-      </div>
+    <div class="hero-portrait">
+      <img src="assets/profile.jpg" alt="Portrait of Lakshmidhar N" />
+      <span class="hero-portrait-tag mono"><span class="dot"></span>Available for work</span>
     </div>
   </div>
 </section>
 
-<!-- ROOT ACCESS / IDENTITY -->
+<!-- IDENTITY -->
 <section id="identity">
   <div class="wrap reveal">
-    <div class="eyebrow">ROOT_ACCESS // IDENTITY_MANIFEST</div>
-    <h2 class="section-title">Where data meets decisions.</h2>
-    <div class="manifest-grid">
-      <div class="manifest-card">
-        <div class="idx">01 // DATA</div>
-        <h3>DATABASE &amp; SQL FLUENCY</h3>
+    <span class="eyebrow">Where data meets <em>decisions</em></span>
+    <h2 class="section-title">Three things I actually care about when I build.</h2>
+    <div class="pillars" style="margin-top:60px;">
+      <div class="pillar">
+        <span class="eyebrow">Data</span>
+        <h3>Database &amp; SQL fluency</h3>
         <p>Comfortable across SQL and SQLite — designing schemas, writing queries, and shaping raw tables into something a model (or a human) can actually use.</p>
       </div>
-      <div class="manifest-card">
-        <div class="idx">02 // INTELLIGENCE</div>
-        <h3>AI / DATA SCIENCE NATIVE</h3>
+      <div class="pillar">
+        <span class="eyebrow">Intelligence</span>
+        <h3>AI / data science native</h3>
         <p>Python and scikit-learn for building, evaluating, and shipping models — with a focus on explainability, not just accuracy scores.</p>
       </div>
-      <div class="manifest-card">
-        <div class="idx">03 // PROBLEM SOLVING</div>
-        <h3>HACKATHON-TESTED</h3>
+      <div class="pillar">
+        <span class="eyebrow">Problem solving</span>
+        <h3>Hackathon-tested</h3>
         <p>National-level THREX Hackathon pre-finalist. Built CV/NLP-based AI systems under real time pressure, in a team, end to end.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STATS + BUILDING STRIP -->
-<section style="padding-top:0; padding-bottom:70px;">
+<!-- STATS -->
+<section style="padding-top:0; padding-bottom:80px;">
   <div class="wrap reveal">
     <div class="stats-row">
       <div class="stat-box">
         <span class="stat-num" data-target="3">0</span>
-        <span class="stat-label">PROJECTS_SHIPPED</span>
+        <span class="stat-label">PROJECTS SHIPPED</span>
       </div>
       <div class="stat-box">
         <span class="stat-num" data-target="5">0</span>
-        <span class="stat-label">PORTALS_BUILT</span>
+        <span class="stat-label">PORTALS BUILT</span>
       </div>
       <div class="stat-box">
         <span class="stat-num" data-suffix="%">8.60</span>
-        <span class="stat-label">CURRENT_CGPA</span>
+        <span class="stat-label">CGPA</span>
       </div>
       <div class="stat-box">
         <span class="stat-num" data-target="1">0</span>
-        <span class="stat-label">INTERNSHIP</span>
+        <span class="stat-label">ML INTERNSHIP</span>
       </div>
     </div>
-
-    <div class="building-strip">
-      <span class="dot" style="background:var(--amber); box-shadow:0 0 8px var(--amber); border-radius:50%; flex-shrink:0; display:inline-block; width:8px; height:8px; animation:pulse 1.8s ease-in-out infinite;"></span>
-      <p><strong>CURRENTLY_BUILDING:</strong> &nbsp;Portfolio site v1 &nbsp;<span class="blink">|</span>&nbsp; AI features in HOMIS &nbsp;<span class="blink">|</span>&nbsp; B.Tech semester 2 coursework</p>
+    <div class="status-line">
+      <span class="dot"></span>
+      <span><strong>Currently building:</strong> Portfolio site v2 · AI features in HOMIS · B.Tech semester 2 coursework</span>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-top">
+  <div class="wrap">
+    <div class="footer-cta reveal">
+      <a href="contact.html" data-cursor="SAY HI">Let's talk <span class="arrow">→</span></a>
+    </div>
+  </div>
+  <div class="wrap footer-grid">
     <div class="footer-brand">
-      <h3 class="display">LN.DEV</h3>
       <p>Crafting intelligent systems from data to deployment. Engineered for clarity, built to scale.</p>
       <div class="social-row mono">
         <a href="https://github.com/lakshmidharn2007-code" target="_blank" rel="noopener">GITHUB</a>
@@ -169,21 +176,25 @@
       </div>
     </div>
     <div class="footer-col">
-      <span class="glabel">INDEX</span>
+      <span class="glabel mono">INDEX</span>
       <a href="index.html">Home</a>
-      <a href="work.html">Projects</a>
+      <a href="work.html">Work</a>
       <a href="about.html">About</a>
     </div>
     <div class="footer-col">
-      <span class="glabel">CONNECT</span>
+      <span class="glabel mono">CONNECT</span>
       <a href="mailto:lakshmidhar2007@gmail.com">Email</a>
-      <a href="contact.html">Transmission</a>
-      <a href="./Resume.pdf" download>Resume</a>
+      <a href="contact.html">Contact</a>
+      <a href="./Resume.pdf" download>Résumé</a>
     </div>
   </div>
-  <div class="sys-strip">
-    <span id="copyYear">© 2026 LN.DEV — ALL_RIGHTS_RESERVED</span>
-    <span>SYSTEM_OP: NORMAL · UPTIME 99.9% · SERVER: IN</span>
+  <div class="wrap sys-strip">
+    <span id="copyYear">© 2026 Lakshmidhar N — All rights reserved</span>
+    <span class="sys-info mono">
+      <span>[GEO] Chennai, IND &middot; 13.08&deg;N, 80.27&deg;E</span>
+      <span>[VERSION] 1.1.0</span>
+      <span class="liveClock">[DATE] &mdash;</span>
+    </span>
   </div>
 </footer>
 

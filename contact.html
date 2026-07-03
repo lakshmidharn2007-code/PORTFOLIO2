@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#06090d" />
+<meta name="theme-color" content="#0a0a09" />
 <meta name="color-scheme" content="dark" />
 <title>Contact — Lakshmidhar N</title>
 <meta name="description" content="Get in touch with Lakshmidhar N — AI &amp; Data Science student and developer." />
@@ -14,91 +14,109 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div id="progress"></div>
 
-<div id="boot">
-  <div class="boot-lines mono" id="bootLines"></div>
-</div>
-
-<div class="bg-grid"></div>
-<div class="bg-blob blob-1"></div>
-<div class="bg-blob blob-2"></div>
-
-<div class="statusbar mono">
-  <span><span class="dot"></span>SYSTEM_ONLINE</span>
-  <span>[GEO] Chennai, IND · 13.08°N, 80.27°E</span>
-  <span>[VERSION] 1.1.0</span>
-  <span id="liveDate">[DATE] --.--.----</span>
-</div>
-
-<div class="ticker-wrap" aria-hidden="true">
-  <div class="ticker-track" id="tickerTrack">
-    <span>TELECOM_CHURN_PREDICTION&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>HOMIS_HOSPITAL_SYSTEM&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>PERSONALITY_PREDICTION_AI&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>THREX_HACKATHON_PRE-FINALIST&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>SAVEETHA_ENGINEERING_COLLEGE&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>CGPA_8.60&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>TELECOM_CHURN_PREDICTION&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>HOMIS_HOSPITAL_SYSTEM&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>PERSONALITY_PREDICTION_AI&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>THREX_HACKATHON_PRE-FINALIST&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>SAVEETHA_ENGINEERING_COLLEGE&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-    <span>CGPA_8.60&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+<div id="preloader">
+  <div class="pre-row">
+    <span class="pre-label mono">LAKSHMIDHAR N — PORTFOLIO</span>
+    <span class="pre-label mono">LOADING</span>
   </div>
+  <div class="pre-count mono" id="preCount">000</div>
+  <div class="pre-bar" id="preBar"></div>
 </div>
 
 <nav>
-  <a href="index.html" class="nav-logo"><span class="dot"></span>LN.SYS</a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html"><span class="idx">01</span>home</a></li>
-    <li><a href="work.html"><span class="idx">02</span>work</a></li>
-    <li><a href="about.html"><span class="idx">03</span>about</a></li>
-    <li><a href="contact.html"><span class="idx">04</span>contact</a></li>
-  </ul>
-  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">☰</button>
+  <a href="index.html" class="nav-logo">Lakshmidhar N</a>
+  <div class="nav-links-inline mono" aria-label="Primary">
+    <a href="index.html"><span class="midx">01</span>home</a>
+    <a href="work.html"><span class="midx">02</span>work</a>
+    <a href="about.html"><span class="midx">03</span>about</a>
+    <a href="contact.html"><span class="midx">04</span>contact</a>
+  </div>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="menuOverlay" aria-expanded="false">
+    MENU
+    <span class="bars"><span></span><span></span><span></span></span>
+  </button>
 </nav>
-<div class="scrim" id="scrim"></div>
-<div class="mobile-drawer" id="drawer">
-  <a href="index.html">01 / home</a>
-  <a href="work.html">02 / work</a>
-  <a href="about.html">03 / about</a>
-  <a href="contact.html">04 / contact</a>
+
+<div id="menuOverlay">
+  <nav class="menu-links" aria-label="Primary">
+    <a href="index.html"><span class="midx">01</span>Home</a>
+    <a href="work.html"><span class="midx">02</span>Work</a>
+    <a href="about.html"><span class="midx">03</span>About</a>
+    <a href="contact.html"><span class="midx">04</span>Contact</a>
+  </nav>
+  <div class="menu-foot">
+    <span>Chennai, India — GMT+5:30</span>
+    <span class="msoc">
+      <a href="https://github.com/lakshmidharn2007-code" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/lakshmidharn-231107u/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:lakshmidhar2007@gmail.com">Email</a>
+    </span>
+  </div>
+</div>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Telecom Churn Prediction</span>
+    <span>HOMIS Hospital System</span>
+    <span>Personality Prediction AI</span>
+    <span>THREX Hackathon Pre-Finalist</span>
+    <span>B.Tech AI &amp; Data Science</span>
+    <span>8.60 CGPA</span>
+    <span>Telecom Churn Prediction</span>
+    <span>HOMIS Hospital System</span>
+    <span>Personality Prediction AI</span>
+    <span>THREX Hackathon Pre-Finalist</span>
+    <span>B.Tech AI &amp; Data Science</span>
+    <span>8.60 CGPA</span>
+  </div>
 </div>
 
 <!-- CONTACT -->
-<section id="contact" style="padding-top:64px;">
+<section class="contact-hero" id="contact">
   <div class="wrap reveal">
-    <div class="eyebrow">OPEN_CHANNEL</div>
-    <h2 class="section-title">Start a Transmission</h2>
-    <div class="contact-panel">
+    <span class="eyebrow">Get in touch</span>
+    <h2 class="contact-headline">Got a data problem worth solving? Let's talk.</h2>
+    <a href="mailto:lakshmidhar2007@gmail.com" class="contact-email-link" data-cursor="EMAIL">lakshmidhar2007@gmail.com</a>
+
+    <div class="contact-grid">
       <div class="contact-info">
         <div class="contact-row">
-          <span class="label">EMAIL</span>
-          <a href="mailto:lakshmidhar2007@gmail.com">lakshmidhar2007@gmail.com</a>
-        </div>
-        <div class="contact-row">
-          <span class="label">PHONE</span>
+          <span class="label mono">PHONE</span>
           <a href="tel:+918247444865">+91 82474 44865</a>
         </div>
         <div class="contact-row">
-          <span class="label">LOCATION</span>
-          <p style="font-family:'JetBrains Mono',monospace; font-size:14px; color:var(--text);">Chennai, India</p>
+          <span class="label mono">LOCATION</span>
+          <p>Chennai, India</p>
+        </div>
+        <div class="contact-row">
+          <span class="label mono">ELSEWHERE</span>
+          <div class="social-row mono" style="margin-top:4px;">
+            <a href="https://github.com/lakshmidharn2007-code" target="_blank" rel="noopener">GITHUB</a>
+            <a href="https://www.linkedin.com/in/lakshmidharn-231107u/" target="_blank" rel="noopener">LINKEDIN</a>
+          </div>
         </div>
       </div>
       <form id="contactForm">
-        <label for="cname">NAME</label>
-        <input id="cname" type="text" placeholder="Your name" required />
-        <label for="cemail">EMAIL</label>
-        <input id="cemail" type="email" placeholder="you@example.com" required />
-        <label for="cmsg">MESSAGE</label>
-        <textarea id="cmsg" rows="3" placeholder="Say hello..." required></textarea>
-        <button type="submit" class="btn btn-primary" style="margin-top:6px;">SEND_TRANSMISSION →</button>
+        <div class="field">
+          <label for="cname">NAME</label>
+          <input id="cname" type="text" placeholder="Your name" required />
+        </div>
+        <div class="field">
+          <label for="cemail">EMAIL</label>
+          <input id="cemail" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="field">
+          <label for="cmsg">MESSAGE</label>
+          <textarea id="cmsg" rows="3" placeholder="Say hello..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" data-cursor="SEND">Send message →</button>
       </form>
     </div>
   </div>
@@ -106,9 +124,8 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-top">
+  <div class="wrap footer-grid" style="border-top:none;">
     <div class="footer-brand">
-      <h3 class="display">LN.DEV</h3>
       <p>Crafting intelligent systems from data to deployment. Engineered for clarity, built to scale.</p>
       <div class="social-row mono">
         <a href="https://github.com/lakshmidharn2007-code" target="_blank" rel="noopener">GITHUB</a>
@@ -117,24 +134,27 @@
       </div>
     </div>
     <div class="footer-col">
-      <span class="glabel">INDEX</span>
+      <span class="glabel mono">INDEX</span>
       <a href="index.html">Home</a>
-      <a href="work.html">Projects</a>
+      <a href="work.html">Work</a>
       <a href="about.html">About</a>
     </div>
     <div class="footer-col">
-      <span class="glabel">CONNECT</span>
+      <span class="glabel mono">CONNECT</span>
       <a href="mailto:lakshmidhar2007@gmail.com">Email</a>
-      <a href="contact.html">Transmission</a>
-      <a href="./Resume.pdf" download>Resume</a>
+      <a href="contact.html">Contact</a>
+      <a href="./Resume.pdf" download>Résumé</a>
     </div>
   </div>
-  <div class="sys-strip">
-    <span id="copyYear">© 2026 LN.DEV — ALL_RIGHTS_RESERVED</span>
-    <span>SYSTEM_OP: NORMAL · UPTIME 99.9% · SERVER: IN</span>
+  <div class="wrap sys-strip">
+    <span id="copyYear">© 2026 Lakshmidhar N — All rights reserved</span>
+    <span class="sys-info mono">
+      <span>[GEO] Chennai, IND &middot; 13.08&deg;N, 80.27&deg;E</span>
+      <span>[VERSION] 1.1.0</span>
+      <span class="liveClock">[DATE] &mdash;</span>
+    </span>
   </div>
 </footer>
-
 
 <button id="toTop" aria-label="Back to top">↑</button>
 
