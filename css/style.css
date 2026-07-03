@@ -147,7 +147,7 @@ body.has-cursor a, body.has-cursor button{ cursor: none; }
 
 /* ----------------------------------- layout ------------------------------- */
 .wrap{ max-width: 1240px; margin: 0 auto; padding: 0 40px; }
-section{ padding: 130px 0; position: relative; }
+section{ padding: 90px 0; position: relative; }
 .hairline{ border-top: 1px solid var(--line); }
 
 .eyebrow{
@@ -300,14 +300,18 @@ nav{
 
 /* ------------------------------------ hero ---------------------------------- */
 .hero{
-  padding-top: 56px;
-  padding-bottom: 90px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .hero-grid{
   display:grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 60px;
-  align-items: start;
+  align-items: center;
+}
+.hero-copy{
+  min-width: 0;
+  container-type: inline-size;
 }
 .tagrow{ display:flex; gap:10px; margin-bottom: 30px; flex-wrap:wrap; }
 .tag{
@@ -321,11 +325,13 @@ nav{
 .hero-name{
   font-family: var(--display);
   font-weight: 800;
-  font-size: clamp(30px, 10.5vw, 128px);
+  font-size: clamp(30px, 10cqi, 140px);
   line-height: .92;
   letter-spacing: -.03em;
   color: var(--ink);
   white-space: nowrap;
+  overflow: hidden;
+  display: block;
 }
 .hero-name .ch{ display:inline-block; }
 .hero-tag{
@@ -345,8 +351,8 @@ nav{
 
 .hero-portrait{
   position: relative;
-  width: clamp(300px, 32vw, 480px);
-  aspect-ratio: 3/4;
+  width: clamp(280px, 28vw, 400px);
+  aspect-ratio: 4/5;
   overflow:hidden;
   background: var(--bg-raise);
   border: 1px solid var(--line);
@@ -388,9 +394,10 @@ nav{
   border-top: 1px solid var(--line);
 }
 .pillar{
-  padding: 40px 34px 40px 0;
+  padding: 28px 34px;
   border-right: 1px solid var(--line);
 }
+.pillar:first-child{ padding-left:0; }
 .pillar:last-child{ border-right:none; padding-right:0; }
 .pillar .eyebrow{ margin-bottom: 26px; }
 .pillar h3{
@@ -409,8 +416,9 @@ nav{
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.stat-box{ padding: 40px 20px 40px 0; border-right: 1px solid var(--line); }
-.stat-box:last-child{ border-right:none; }
+.stat-box{ padding: 28px 24px; border-right: 1px solid var(--line); }
+.stat-box:first-child{ padding-left:0; }
+.stat-box:last-child{ border-right:none; padding-right:0; }
 .stat-num{
   display:block;
   font-family: var(--display);
@@ -629,7 +637,7 @@ nav{
 .cert-date{ font-size: 10.5px; color: var(--ink-faint); margin-top:4px; }
 
 /* --------------------------------------------- contact page ---------------------------------- */
-.contact-hero{ padding-top: calc(var(--nav-h) + 40px); }
+.contact-hero{ padding-top: 40px; }
 .contact-headline{
   font-family: var(--display);
   font-weight: 800;
@@ -683,9 +691,9 @@ nav{
 #contactForm button{ align-self:flex-start; }
 
 /* -------------------------------------------------- footer -------------------------------------- */
-footer{ border-top: 1px solid var(--line); position:relative; z-index:1; padding-top: 90px; }
+footer{ border-top: 1px solid var(--line); position:relative; z-index:1; padding-top: 60px; }
 .footer-cta{
-  padding: 0 0 70px;
+  padding: 0 0 50px;
 }
 .footer-cta a{
   font-family: var(--display);
