@@ -67,12 +67,14 @@
     <span>HOMIS Hospital System</span>
     <span>Personality Prediction AI</span>
     <span>THREX Hackathon Pre-Finalist</span>
+    <span>Voice Command Model</span>
     <span>B.Tech AI &amp; Data Science</span>
     <span>8.60 CGPA</span>
     <span>Telecom Churn Prediction</span>
     <span>HOMIS Hospital System</span>
     <span>Personality Prediction AI</span>
     <span>THREX Hackathon Pre-Finalist</span>
+    <span>Voice Command Model</span>
     <span>B.Tech AI &amp; Data Science</span>
     <span>8.60 CGPA</span>
   </div>
@@ -169,6 +171,32 @@
         <div class="proj-links">
           <a href="https://github.com/lakshmidharn2007-code/personality-prediction" target="_blank" rel="noopener">SOURCE →</a>
           <button onclick="openModal('prj03')" data-cursor="OPEN">DETAILS →</button>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="proj-id mono">WORK / 04</div>
+        <div class="proj-main">
+          <h3>Voice Command Model<span class="year">2026</span></h3>
+          <p>A browser-based voice assistant that listens to spoken commands, classifies the intent using a custom-trained machine learning model, and performs the corresponding action — whether that's navigating the app's own pages or opening an external website.</p>
+          <div class="proj-tags mono">
+            <span>PYTHON</span><span>VERCEL</span><span>SCIKIT-LEARN</span><span>PANDAS</span><span>TYPESCRIPT</span>
+          </div>
+        </div>
+        <div class="proj-visual" data-cursor="VIEW">
+          <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid meet">
+            <path d="M20,120 A80,80 0 0,1 70,32" fill="none" stroke="#3a6b4a" stroke-width="14"/>
+            <path d="M70,32 A80,80 0 0,1 130,32" fill="none" style="stroke:var(--signal)" stroke-width="14"/>
+            <path d="M130,32 A80,80 0 0,1 180,120" fill="none" stroke="#6b3a3a" stroke-width="14"/>
+            <line x1="100" y1="120" x2="145" y2="72" style="stroke:var(--ink)" stroke-width="2.5"/>
+            <circle cx="100" cy="120" r="6" style="fill:var(--ink)"/>
+            <text x="100" y="142" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="var(--ink-faint)">RISK GAUGE</text>
+          </svg>
+        </div>
+        <div class="proj-links">
+          <a href="https://voice-command-amber.vercel.app/" target="_blank" rel="noopener">LIVE DEMO →</a>
+          <a href="https://github.com/lakshmidharn2007-code/Voice-Command-ML" target="_blank" rel="noopener">SOURCE →</a>
+          <button onclick="openModal('prj04')" data-cursor="OPEN">DETAILS →</button>
         </div>
       </div>
 
@@ -477,6 +505,30 @@
   </div>
   <div class="m-links">
     <a href="https://github.com/lakshmidharn2007-code/personality-prediction" target="_blank" rel="noopener" class="btn btn-primary">SOURCE →</a>
+  </div>
+</template>
+
+
+<template id="tpl-prj04">
+  <h2>Voice Command Model</h2>
+  <span class="m-year mono">WORK / 04 — JUL 2026 — JUL 2026</span>
+  <p class="m-desc">A browser-based voice assistant that listens to spoken commands, classifies the intent using a custom-trained machine learning model, and performs the corresponding action — whether that's navigating the app's own pages or opening an external website</p>
+  <ul class="m-highlights">
+    <li>Browser-based speech-to-text using the Web Speech API — no audio ever leaves the device.</li>
+    <li>Custom-trained intent classifier (TF-IDF + Logistic Regression via scikit-learn) served through a FastAPI backend.</li>
+    <li>Generic <code>open_website</code> intent that generalises to unseen site names (Gemini, Notion, Discord, etc.) instead of one-off hardcoded intents per site.</li>
+    <li>Site-name extraction with an alias-to-URL lookup, plus a Google-search fallback for anything not explicitly mapped.</li>
+    <li>App-internal navigation intents (<code>open_dashboard</code>, <code>open_projects</code>, <code>open_notes</code>, <code>search</code>, <code>clear</code>, <code>help</code>) alongside external site-opening commands.</li>
+    <li>Confidence-score threshold to reject low-confidence predictions instead of guessing wrong.</li>
+    <li>Persisted model artifacts (<code>intent_model.joblib</code>, <code>label_encoder.joblib</code>, <code>metadata.joblib</code>) for fast inference without retraining on every request.</li>
+    <li>Single-codebase deployment on Vercel — Next.js frontend and Python ML backend both ship from the same repo, with the API auto-detected as a serverless function.</li>
+</ul>
+  <div class="proj-tags mono" style="margin-bottom:26px;">
+    <span>PYTHON</span><span>VERCEL</span><span>SCIKIT-LEARN</span><span>TYPESCRIPT</span><span>UVICORN</span>
+  </div>
+  <div class="m-links">
+    <a href="https://voice-command-amber.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">LIVE DEMO →</a>
+    <a href="https://github.com/lakshmidharn2007-code/Voice-Command-ML" target="_blank" rel="noopener" class="btn btn-ghost">SOURCE →</a>
   </div>
 </template>
 
