@@ -260,6 +260,7 @@ nav{
   color: var(--ink);
   display:flex; align-items:center; gap: 18px;
   opacity: 0;
+  flex: none;
   transform: translateY(24px);
   transition: opacity .5s var(--ease), transform .5s var(--ease), color .25s;
 }
