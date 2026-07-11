@@ -112,6 +112,7 @@
     document.body.style.overflow = '';
   }
   function openMenu() {
+    if (menuOverlay) menuOverlay.scrollTop = 0;
     menuOverlay?.classList.add('open');
     menuBtn?.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
