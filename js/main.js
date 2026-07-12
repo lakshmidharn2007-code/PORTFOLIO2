@@ -288,30 +288,59 @@
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     const submitBtn = contactForm.querySelector('button[type="submit"]');
-    let note = contactForm.querySelector('.form-note');
-    if (!note) {
-      note = document.createElement('p');
-      note.className = 'form-note mono';
-      note.setAttribute('role', 'status');
-      note.setAttribute('aria-live', 'polite');
-      contactForm.appendChild(note);
+    const successPanel = document.getElementById('formSuccess');
+    const fields = {
+      cname: { el: document.getElementById('cname'), test: v => v.trim().length >= 2, msg: 'Please enter your name (min. 2 characters).' },
+      cemail: { el: document.getElementById('cemail'), test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()), msg: 'Please enter a valid email address.' },
+      cmsg: { el: document.getElementById('cmsg'), test: v => v.trim().length >= 10, msg: 'Message should be at least 10 characters.' }
+    };
+
+    function validateField(key) {
+      const f = fields[key];
+      if (!f || !f.el) return true;
+      const wrap = f.el.closest('.field');
+      const ok = f.test(f.el.value);
+      if (wrap) {
+        wrap.classList.toggle('has-error', !ok);
+        wrap.classList.toggle('is-valid', ok);
+        const errEl = wrap.querySelector('.field-error');
+        if (errEl) errEl.textContent = f.msg;
+      }
+      return ok;
     }
+
+    Object.keys(fields).forEach(key => {
+      const f = fields[key];
+      if (!f.el) return;
+      f.el.addEventListener('blur', () => validateField(key));
+      f.el.addEventListener('input', () => {
+        const wrap = f.el.closest('.field');
+        if (wrap && wrap.classList.contains('has-error')) validateField(key);
+      });
+    });
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('cname')?.value.trim();
-      const email = document.getElementById('cemail')?.value.trim();
-      const msg = document.getElementById('cmsg')?.value.trim();
-      if (!name || !email || !msg) {
-        note.textContent = '[ERROR] all fields are required.';
-        note.style.color = '#ff6a5a';
+      const results = Object.keys(fields).map(validateField);
+      if (results.includes(false)) {
+        const firstInvalid = contactForm.querySelector('.field.has-error input, .field.has-error textarea');
+        firstInvalid?.focus();
         return;
       }
+      const email = fields.cemail.el.value.trim();
       const originalLabel = submitBtn ? submitBtn.textContent : '';
       if (submitBtn) { submitBtn.textContent = 'SENDING...'; submitBtn.disabled = true; }
       setTimeout(() => {
-        note.style.color = '';
-        note.textContent = `[OK] message queued — I'll reply at ${email} soon.`;
+        contactForm.classList.add('hide-form');
+        if (successPanel) {
+          successPanel.classList.add('show');
+          const emailSpan = successPanel.querySelector('.fs-email');
+          if (emailSpan) emailSpan.textContent = email;
+          successPanel.setAttribute('tabindex', '-1');
+          successPanel.focus();
+        }
         contactForm.reset();
+        Object.values(fields).forEach(f => f.el?.closest('.field')?.classList.remove('is-valid', 'has-error'));
         if (submitBtn) { submitBtn.textContent = originalLabel; submitBtn.disabled = false; }
       }, 700);
     });

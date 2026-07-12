@@ -5,8 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0a0a09" />
 <meta name="color-scheme" content="dark" />
-<title>LAKSHMIDHAR N</title>
-<meta name="description" content="Get in touch with Lakshmidhar N — AI &amp; Data Science student and developer." />
+<title>Contact — Lakshmidhar N</title>
+<meta name="description" content="Get in touch with Lakshmidhar N — open to internships, research collaborations, and freelance project discussions in AI/ML and full-stack development." />
+<link rel="canonical" href="https://laksh-folio.vercel.app/contact.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://laksh-folio.vercel.app/contact.html" />
+<meta property="og:title" content="Contact — Lakshmidhar N" />
+<meta property="og:description" content="Get in touch with Lakshmidhar N — open to internships, research collaborations, and freelance project discussions in AI/ML and full-stack development." />
+<meta property="og:image" content="https://laksh-folio.vercel.app/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact — Lakshmidhar N" />
+<meta name="twitter:description" content="Get in touch with Lakshmidhar N — open to internships, research collaborations, and freelance project discussions in AI/ML and full-stack development." />
+<meta name="twitter:image" content="https://laksh-folio.vercel.app/assets/og-image.png" />
+
 <link rel="icon" href="assets/favicon.ico" sizes="any" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
@@ -29,7 +47,6 @@
   <div class="pre-count mono" id="preCount">000</div>
   <div class="pre-bar" id="preBar"></div>
 </div>
-
 <nav>
   <a href="index.html" class="nav-logo">L N</a>
   <div class="nav-links-inline mono" aria-label="Primary">
@@ -43,7 +60,6 @@
     <span class="bars"><span></span><span></span><span></span></span>
   </button>
 </nav>
-
 <div id="menuOverlay">
   <nav class="menu-links" aria-label="Primary">
     <a href="index.html"><span class="midx">01</span>Home</a>
@@ -63,23 +79,9 @@
     </span>
   </div>
 </div>
-
 <div class="marquee-wrap">
   <div class="marquee-track">
-    <span>Telecom Churn Prediction</span>
-    <span>HOMIS Hospital System</span>
-    <span>Personality Prediction AI</span>
-    <span>THREX Hackathon Pre-Finalist</span>
-    <span>Voice Command Model</span>
-    <span>B.Tech AI &amp; Data Science</span>
-    <span>8.60 CGPA</span>
-    <span>Telecom Churn Prediction</span>
-    <span>HOMIS Hospital System</span>
-    <span>Personality Prediction AI</span>
-    <span>THREX Hackathon Pre-Finalist</span>
-    <span>Voice Command Model</span>
-    <span>B.Tech AI &amp; Data Science</span>
-    <span>8.60 CGPA</span>
+    <span>Telecom Churn Prediction</span><span>HOMIS Hospital System</span><span>Personality Prediction AI</span><span>THREX Hackathon Finalist</span><span>Voice Command Model</span><span>B.Tech AI &amp; Data Science</span><span>8.60 CGPA</span><span>Telecom Churn Prediction</span><span>HOMIS Hospital System</span><span>Personality Prediction AI</span><span>THREX Hackathon Finalist</span><span>Voice Command Model</span><span>B.Tech AI &amp; Data Science</span><span>8.60 CGPA</span>
   </div>
 </div>
 
@@ -89,6 +91,11 @@
     <span class="eyebrow">Get in touch</span>
     <h2 class="contact-headline">Got a data problem worth solving? Let's talk.</h2>
     <a href="mailto:lakshmidhar2007@gmail.com" class="contact-email-link" data-cursor="EMAIL">lakshmidhar2007@gmail.com</a>
+
+    <div class="open-to-banner" style="max-width:640px;">
+      <span class="dot"></span>
+      <p><strong>Open to internships, research collaborations, and freelance project discussions</strong> — particularly applied ML, NLP, and full-stack product work.</p>
+    </div>
 
     <div class="contact-grid">
       <div class="contact-info">
@@ -110,28 +117,45 @@
     </div>
         </div>
       </div>
-      <form id="contactForm">
-        <div class="field">
-          <label for="cname">NAME</label>
-          <input id="cname" type="text" placeholder="Your name" required />
+
+      <div>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="cname">NAME</label>
+            <input id="cname" type="text" placeholder="Your name" required minlength="2" />
+            <span class="field-error mono">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label for="cemail">EMAIL</label>
+            <input id="cemail" type="email" placeholder="you@example.com" required />
+            <span class="field-error mono">Please enter a valid email address.</span>
+          </div>
+          <div class="field">
+            <label for="cmsg">MESSAGE</label>
+            <textarea id="cmsg" rows="4" placeholder="What are you working on, or what would you like to talk about?" required minlength="10"></textarea>
+            <span class="field-error mono">Message should be at least 10 characters.</span>
+          </div>
+          <button type="submit" class="btn btn-primary" data-cursor="SEND">Send message →</button>
+          <div class="response-note"><span class="dot"></span>I typically respond within 24–48 hours.</div>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="fs-icon">✓</div>
+          <h4>Message sent.</h4>
+          <p>Thanks for reaching out — I'll get back to you at <strong class="fs-email">your email</strong> within 24–48 hours. In the meantime, feel free to look through my <a href="work.html" style="color:var(--signal);">work</a> or connect on <a href="https://www.linkedin.com/in/lakshmidharn-231107u/" target="_blank" rel="noopener" style="color:var(--signal);">LinkedIn</a>.</p>
         </div>
-        <div class="field">
-          <label for="cemail">EMAIL</label>
-          <input id="cemail" type="email" placeholder="you@example.com" required />
-        </div>
-        <div class="field">
-          <label for="cmsg">MESSAGE</label>
-          <textarea id="cmsg" rows="3" placeholder="Say hello..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" data-cursor="SEND">Send message →</button>
-      </form>
+      </div>
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
-  <div class="wrap footer-grid" style="border-top:none;">
+  <div class="wrap">
+    <div class="footer-cta reveal">
+      <a href="contact.html" data-cursor="SAY HI">Let's talk <span class="arrow">→</span></a>
+    </div>
+  </div>
+  <div class="wrap footer-grid">
     <div class="footer-brand">
       <p>Crafting intelligent systems from data to deployment. Engineered for clarity, built to scale.</p>
       <div class="icon-row small">
@@ -158,7 +182,7 @@
     <span id="copyYear">© 2026 Lakshmidhar N — All rights reserved</span>
     <span class="sys-info mono">
       <span>[GEO] Chennai, IND &middot; 13.08&deg;N, 80.27&deg;E</span>
-      <span>[VERSION] 1.1.0</span>
+      <span>[VERSION] 1.2.0</span>
       <span class="liveClock">[DATE] &mdash;</span>
     </span>
   </div>
